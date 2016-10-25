@@ -11,12 +11,18 @@ var splitString = function(stringToSplit, separator) {
 
 var replaceVowels = function(arrayOfLetters) {
   for (index=0; index<arrayOfLetters.length; index+=1){
-    for (i=0; i<vowels.length; i+=1){
-      if (arrayOfLetters[index] === vowels[i]){
-        arrayOfLetters[index] = "-";
-      }
-
+    vowels.forEach(function(vowel){
+      if (arrayOfLetters[index] === vowel){
+      arrayOfLetters[index] = "-";
     }
+  })
+    //REPLACE forEach function
+    // for (i=0; i<vowels.length; i+=1){
+    //   if (arrayOfLetters[index] === vowels[i]){
+    //     arrayOfLetters[index] = "-";
+    //   }
+
+    // }
   }
 }
 
